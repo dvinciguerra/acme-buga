@@ -1,0 +1,76 @@
+
+=encoding utf8
+
+=head1 NAME
+
+Acme::Buga - Buga text encoding
+
+
+=head1 SYNOPSIS
+
+    use Acme::Buga;
+
+    # Default
+    my $b = Acme::Buga->new;
+    say $b->encode('Test');
+
+    # Alternative constructor
+    use Acme::Buga 'buga';
+    say buga('Another Test')->encode;
+
+
+=head1 DESCRIPTION
+
+This module encode any text into a Buga buga bUga string value.
+
+
+=head1 FUNCTIONS
+
+Acme::Buga exports the following functions...
+
+=head2 buga
+
+    my $obj = buga('Daniel Vinciguerra');
+
+Alternative constructor that returns a Acme::Buga object.
+
+
+=head1 METHODS
+
+Acme::Buga contains this methods...
+
+=head2 new
+
+    my $b = Acme::Buga->new;
+    my $b = Acme::Buga->new( value => 'Test' );
+
+Default class constructor    
+
+=head2 encode
+
+    my $encoded = $b->encode;
+    my $encoded = $b->encode('Test');
+
+Encode string into buga text
+
+
+=head2 decode
+
+    my $decoded = $b->decode;
+    my $decoded = $b->decode('buGa BUGA Buga BUga buGa BUGA BUga BugA BugA BUGA Buga BUga buGa buga');
+
+Decode string into buga text
+
+
+=head1 AUTHOR
+
+Daniel Vinciguerra <daniel.vinciguerra@bivee.com.br>
+
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Daniel Vinciguerra.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
